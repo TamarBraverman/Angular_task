@@ -1,0 +1,59 @@
+<div id="form-main">
+  <div id="form-div">
+    <form class="form" id="form1" novalidate [formGroup]="myForm">
+
+      <input name="Id" id="picture" type="text" class="feedback-input form-control" formControlName="Id" required placeholder="enter your Id"
+         />
+      <div *ngIf="myForm.get('Id').errors">
+        <div *ngIf="myForm.get('Id').errors.valid_Id&&myForm.get('Id').dirty">
+          id is not valid
+        </div>
+        <div *ngIf="myForm.get('Id').errors.required&&myForm.get('Id').touched">
+          id is required
+        </div>
+      </div>
+      <input name="age" id="picture" type="text" class="feedback-input form-control" formControlName="age" required placeholder="enter your age"
+      />
+      <div *ngIf="myForm.get('age').errors">
+        <div *ngIf="myForm.get('age').errors.validAge&&myForm.get('age').dirty">
+          age must be between 0-120
+        </div>
+        <div *ngIf="myForm.get('age').errors.required&&myForm.get('age').touched">
+          age is required
+        </div>
+      </div>
+      <input name="name" type="text" class="feedback-input form-control" formControlName="name" required maxlength="15" minlength="3"
+        placeholder="enter your name" id="picture" />
+      <div *ngIf="myForm.get('name').errors">
+        <div *ngIf="myForm.get('name').errors.minlength&&myForm.get('name').dirty">
+          name must be between 3-15 characters
+        </div>
+        <div *ngIf="myForm.get('name').errors.required&&myForm.get('name').touched">
+          name is required
+        </div>
+      </div>
+      <input name="country" type="text" class="feedback-input form-control" formControlName="country" required placeholder="enter your country"
+        id="picture" />
+      <div *ngIf="myForm.get('country').errors">
+        <div *ngIf="myForm.get('country').errors.validCountry&&myForm.get('country').dirty">
+          choose another country
+        </div>
+        <div *ngIf="myForm.get('country').errors.required&&myForm.get('country').touched">
+          country is required
+        </div>
+      </div>
+      <div  class="feedback-input form-control" id="picture">
+        Select Gender:
+          <input type="checkbox" id="isMale" name="isMale" value="isMale" checked formControlName="isMale">
+        <br>
+        <br>
+      </div>
+      <div class="submit">
+        <input type="submit" value="SEND" id="button-blue" (click)="submit()" />
+        <div class="ease"></div>
+      </div>
+
+
+    </form>
+  </div>
+</div>
