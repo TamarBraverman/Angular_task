@@ -1,0 +1,25 @@
+
+<br>
+<br>
+<br>
+<p>search:</p>
+<input type="text" (keyup)="onKey($event)">
+<table>
+  <thead>
+      <th>Name</th>
+      <th>NativeName</th>
+      <th>Capital</th>
+      <th>Population</th>
+      <th>Flag</th>
+  </thead>
+  <tbody>
+      <tr *ngFor="let country of countryFilter ">
+          <td>{{country.name}}</td>
+          <td>{{country.nativeName}}</td>
+          <td>{{country.capital}}</td>
+          <td>{{country.population}}</td>
+          <td><img src={{country.flag}}></td>
+      </tr>
+  </tbody>
+</table>
+<!-- | filterBy: ['name']: 1  filterBy:['capital']: -->

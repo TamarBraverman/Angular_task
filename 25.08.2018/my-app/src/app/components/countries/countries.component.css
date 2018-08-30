@@ -1,0 +1,36 @@
+img{
+    width:80px;
+    height: 50px;
+}
+th{
+    background-color: #c769b2;
+}
+td{
+    background-color: #a7e6a7;
+}
+table{
+    text-align: center;
+    margin: auto;
+}
+input{
+    margin: auto;
+    text-align: center;
+    margin-left: 100vh;
+    margin-top: -2vh;
+    margin-bottom: 7vh;
+    height: 3vh;
+    width: 12vw;
+}
+p{
+    color: #c769b2;
+    font-size: 4vh;
+    margin-left: 86vh;
+    margin-bottom: -3vh;
+}
+/* section{
+    width: 101%;
+    margin-left: -7px;
+    margin-top: 0vh;
+    height: 80%;
+    background-color: #cfefed;
+} */

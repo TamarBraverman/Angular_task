@@ -1,0 +1,19 @@
+h1{
+
+    text-align: center;
+    text-align: center;
+    color: #c769b2;
+    /* font-size: 33px; */
+    font-family: sans-serif;
+}
+a{
+    color: #48b8b9;
+    font-size: 26px;
+}
+ul.nav.navbar-nav.active{
+    text-align: center;
+}
+#home{
+    margin-right: 15px;
+    margin-left: -39px;
+}
