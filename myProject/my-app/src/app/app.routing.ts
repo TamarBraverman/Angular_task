@@ -10,6 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { LoginComponent } from './components/account/components/login/login.component';
 import { RegisterComponent } from './components/account/components/register/register.component';
+import { ProductPreviewComponent } from './components/product-preview/product-preview.component';
+import { CartProductComponent } from './components/cart-product/cart-product.component';
 import { Component } from '@angular/core';
 const appRoutes: Routes = [
 
@@ -21,10 +23,14 @@ const appRoutes: Routes = [
             {path:'register',component:RegisterComponent}
         ]
     },
-    { path: 'products', component:ProductsComponent  },
-    { path: 'cart', component: CartComponent },
-    { path: 'home', component: HomeComponent },
+    { path: 'products', component:ProductsComponent, children:[
+        {path:'productPreview', component:ProductPreviewComponent}
+    ] },
+    { path: 'cart', component: CartComponent ,children:[
+        {path:'cartProduct' ,component:CartProductComponent}
+    ]},
     { path: 'productDetails', component: ProductDetailsComponent },
+    { path: 'home', component: HomeComponent },
     { path: '', component: HomeComponent },
     { path: '**', component: HomeComponent },
     { path: 'footer', component: FooterComponent }

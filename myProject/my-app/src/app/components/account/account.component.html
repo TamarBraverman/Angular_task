@@ -3,9 +3,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 offset-sm-3">
-                <p>logout</p>
-                <a routerLink="/account/login" style="padding-bottom: 20px; padding-top: 20px;" class="mat-icon material-icons">login</a>
-                <a routerLink="/account/register" style="padding-bottom: 20px; padding-top: 20px;" class="mat-icon material-icons">register</a>
+                <button *ngIf="user" (click)="usersService.logout()">logout</button>
+                <a *ngIf="!user" routerLink="/account/login" style="padding-bottom: 20px; padding-top: 20px;" class="mat-icon material-icons">login</a>
+                <a *ngIf="!user" routerLink="/account/register" style="padding-bottom: 20px; padding-top: 20px;" class="mat-icon material-icons">register</a>
            
             </div>
         </div>

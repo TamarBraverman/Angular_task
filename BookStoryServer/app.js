@@ -79,7 +79,6 @@ let legalTz = (tz) => {
 //end project
 app.post("/api/register", (req, res) => {
     let users = require("./users.json");
-    console.log("hi");
     if (ValiditeRegister(req.body) == true) {
         users.push(req.body)
         fs.writeFileSync("users.json", JSON.stringify(users));
@@ -99,7 +98,27 @@ function ValiditeRegister(user) {
         return false;
     return true;
 }
+app.get("/api/login:user", (req, res) => {
+    let users = require("./users.json");
+    if (ValiditeRegister(req.body) == true) {
+        if(users.includes())
+        users.push(req.body)
+        fs.writeFileSync("users.json", JSON.stringify(users));
+        res.status(201).send(JSON.stringify(users));
+    }
+    else { res.status(400).send({ message: "sorry" }) }
 
+});
+
+function ValiditeLogin(user)
+{
+    if (user["userName"].length < 3 || user["firstName"].length > 15 || !user["firstName"].match(/^[a-zA-Z]*$/))
+        return false;
+    if (user["Password"].length < 5 || user["lastName"].length > 10 )
+        return false;
+
+    return true;
+}
 const port = process.env.PORT || 3500;
 app.listen(port, () => { console.log(`OK`); });
 

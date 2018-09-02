@@ -1,11 +1,11 @@
 <form [formGroup]="formGroup" (ngSubmit)="submitRegister()">
 
-    <div *ngFor="let x of obj.keys(formGroup.controls)">
-        <label>{{x}}:</label>
-        <input formControlName="{{x}}" />
+    <div *ngFor="let controlName of obj.keys(formGroup.controls)">
+        <label>{{controlName}}:</label>
+        <input formControlName="{{controlName}}" />
 
-        <div *ngIf="formGroup.controls[x].errors">
-            <p *ngFor="let err of obj.values(formGroup.controls[x].errors)">{{err}}</p>
+        <div *ngIf="formGroup.controls[controlName].errors">
+            <p *ngFor="let err of obj.values(formGroup.controls[controlName].errors)">{{err}}</p>
         </div>
 
     </div>

@@ -15,6 +15,10 @@ import { RegisterComponent } from './components/account/components/register/regi
 import { ReactiveFormsModule }    from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import{UsersService}from'./shared/services/users.service';
+import { ProductPreviewComponent } from './components/product-preview/product-preview.component';
+import { CartProductComponent } from './components/cart-product/cart-product.component';
+import{User}from'./shared/models/user';
+import{bookStore}from'./shared/models/book-store';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,9 @@ import{UsersService}from'./shared/services/users.service';
     HomeComponent,
     ProductDetailsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductPreviewComponent,
+    CartProductComponent
     
   ],
   imports: [
