@@ -8,10 +8,16 @@ import {UsersService}from '../../shared/services/users.service';
 })
 export class HeaderComponent implements OnInit {
 
-  user: any;
+  user: User;
 
-  constructor(usersService:UsersService) {
-    this.user = localStorage.getItem('user');
+  constructor(private usersService:UsersService) {
+    this.user = this.usersService.checkUserLogin();
+    this.usersService.subject.subscribe(
+      {
+        next: (v: any) => {
+          this.user = v;
+        }
+      })
   }
 
   ngOnInit() {

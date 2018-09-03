@@ -1,21 +1,17 @@
-<h1>{{book.title}}</h1>
-<div class="wrapper">
-    <div class="products category">
-      <ul class="">
-        <li>
-          <div class="wrapimg">
-            <img src="https://www.comparison.com.au/system/image_library/22181/Samsung_EC-ST500.jpg">
-          </div>
-          <div class="titlePro">
-            <a href="javascript:;">{{book.title}}</a>
-            <p class="descTitle">Ingormations</p>
-            <p>{{book.description}}</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+<div id="details">
+    <h1>{{book.subtitle}}</h1>
+    <h3>{{book.subtitle}}</h3>
+    <label>authors</label>
+    <p>{{book.authors}}</p>
+    <label>publisher:</label>
+    <p>{{book.publisher}}</p>
+    <label>publishedDate:</label>
+    <p>{{book.publishedDate}}</p>
+    <label>description:</label>
+    <p>{{book.description}}</p>
+    <label>pageCount:</label>
+    <p>{{book.pageCount}}</p>
 
-
-<button [disabled]="!user" (click)="AddToCart()">add to your cart</button>
-<button (click)="backToProduct()">back</button>
+  <button id="cart" *ngIf="user" (click)="AddToCart()">add to your cart</button>
+  <button id="back" (click)="backToProduct()">back to product</button>
+</div>

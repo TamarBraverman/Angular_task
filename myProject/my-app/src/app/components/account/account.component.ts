@@ -9,10 +9,20 @@ import { User } from '../../shared/models/user';
 export class AccountComponent implements OnInit {
 
   user: User;
-  constructor(usersService: UsersService) {
-    this.user = usersService.user;
+  constructor(private usersService: UsersService) {
+    this.user = this.usersService.checkUserLogin();
+    console.log(this.user);
+    this.usersService.subject.subscribe(
+      {
+        next: (v: any) => {
+          this.user = v;
+        }
+      })
   }
   ngOnInit() {
   }
-
+  logout()
+  {
+    this.usersService.logout();
+  }
 }

@@ -1,19 +1,17 @@
-
 <div class="wrapper">
   <div class="products category">
     <ul class="">
       <li>
-        <div class="wrapimg">
-          <img src="https://www.comparison.com.au/system/image_library/22181/Samsung_EC-ST500.jpg">
-          <div class="addPro">
-            <button (click)="details()">view details </button>
-          </div>
+        <div>
+          <h1>{{book['volumeInfo'].title}}</h1>
+          <h3>{{book['volumeInfo'].subtitle}}</h3>
         </div>
-        <div class="titlePro">
-          <a href="javascript:;">{{book['volumeInfo'].title}}</a>
-          <p class="descTitle">Ingormations</p>
-          <p>{{book['volumeInfo'].description}}</p>
+
+        <div class="addPro">
+          <button (click)="details()">view details </button>
         </div>
+
+
       </li>
     </ul>
   </div>

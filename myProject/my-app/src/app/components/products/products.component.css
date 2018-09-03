@@ -1,0 +1,18 @@
+input{
+
+    margin: auto;
+    text-align: center;
+    margin-left: 100vh;
+    margin-top: -2vh;
+    margin-bottom: 7vh;
+    height: 6vh;
+    border-color: blue;
+    width: 12vw;
+}
+p{
+    
+    color: #ec621e;
+    font-size: 5vh;
+    margin-left: 82vh;
+    margin-bottom: -5vh;
+}

@@ -1,6 +1,7 @@
 export class bookStore {
  
-    city: string;
-    street: string;
-    houseNumber: number;
-}
+    constructor(public street?:string, public houseNumber?:number, public city?:string)
+    {
+
+    }
+}  

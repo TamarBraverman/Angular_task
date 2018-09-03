@@ -9,7 +9,7 @@ export class ProductsComponent implements OnInit {
 
   // list:any=[];
   listFilter: any = [];
-  text: string
+  text: string;
   constructor(private booksService: BooksService) {
     this.booksService.getList().subscribe((result: any) => {
       this.listFilter = result['items'];
@@ -17,11 +17,16 @@ export class ProductsComponent implements OnInit {
     });
 
   }
+  // constructor(private booksService: BooksService) {
+  //   this.booksService.getnewlist().subscribe(res => {
+  //    let result:any = (res);
+  //     this.listFilter=result["items"];
+  //     // localStorage.setItem('currentUser', JSON.stringify(this.user));
+  //   }, err => {
 
+  //   });
+ 
   ngOnInit() {
-
-
-
   }
   submit(event) {
     this.booksService.getListfilter(event).subscribe(data => {

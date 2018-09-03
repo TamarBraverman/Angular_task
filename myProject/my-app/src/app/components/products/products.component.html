@@ -1,7 +1,7 @@
 <p>search:</p>
-<input type="text" (blur)="submit($event.target.value)">
-<table>
-    <tr *ngFor="let book of listFilter">
+<input type="text" (keyup)="submit($event.target.value)">
+<div>
+    <div *ngFor="let book of listFilter">
         <app-product-preview [book]="book"></app-product-preview>
-    </tr>
-</table>
+    </div>
+</div>

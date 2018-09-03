@@ -1,0 +1,30 @@
+#details{
+
+    height: 74vh;
+    width: 57vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0vh;
+    background-color: #f7f7f7;
+    border-color: blue;
+    border-style: ridge;
+}
+h3{
+    font-size: 17px;
+    text-align: center;
+    color: blue;
+}
+h1{
+    font-size: 21px;
+    text-align: center;
+    color: blue;
+}
+#cart{
+    border-color: blue;
+    margin-left: 11vh;
+}
+#back{
+    border-color: blue;
+    margin-left: 2vh;
+}

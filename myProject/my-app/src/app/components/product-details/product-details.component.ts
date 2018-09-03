@@ -3,6 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '../../../../node_modules/@angular/router';
 import { UsersService } from '../../shared/services/users.service';
 import { BooksService } from '../../shared/services/books.service';
+import { User } from '../../shared/models/user';
 
 
 @Component({
@@ -13,9 +14,9 @@ import { BooksService } from '../../shared/services/books.service';
 export class ProductDetailsComponent implements OnInit {
 
   book: any;
-  user = localStorage.getItem('user');
+  user:User;
   constructor(private activeRoute: ActivatedRoute, private router: Router, private booksService: BooksService) {
-    alert(this.user);
+    this.user=JSON.parse(localStorage.getItem('user')) ;
   }
 
   ngOnInit() {

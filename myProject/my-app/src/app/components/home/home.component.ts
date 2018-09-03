@@ -9,13 +9,7 @@ export class HomeComponent implements OnInit {
 
   myBookStore: bookStore;
   constructor() {
-
-    this.myBookStore=new bookStore();
-    this.myBookStore.city = "Tel-Aviv";
-    this.myBookStore.street="Hamasger";
-    this.myBookStore.houseNumber=12;
-
-
+    this.myBookStore=new bookStore("Hamasger",12,"Tel-Aviv");
   }
 
   ngOnInit() {

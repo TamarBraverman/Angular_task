@@ -1,0 +1,29 @@
+.jumbotron{
+    background-color: #0dc3da;
+    height: 18vh;
+}
+p{
+  
+    color: #1111da;
+    font-size: 6vh;
+    display: inline;
+    text-align: center;
+    margin-left: 77vh;
+
+}
+a{
+    color: #152ca5;
+    font-size: 4vh;
+}
+#product{
+    margin-left: 3vh;
+}
+img{
+    float: right;
+
+    border-radius: 50%;
+    width: 9vw;
+    height: 17vh;
+    margin-right: 4vh;
+    margin-top: -15vh;
+}
