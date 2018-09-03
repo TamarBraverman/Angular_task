@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-product-preview',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-preview.component.css']
 })
 export class ProductPreviewComponent implements OnInit {
-
-  constructor() { }
+  @Input() book:any;
+    constructor(private router:Router) { 
+   
+    }
 
   ngOnInit() {
+  
+  }
+  details()
+  {
+    this.router.navigate(["/productDetails",this.book.volumeInfo]);
   }
 
 }

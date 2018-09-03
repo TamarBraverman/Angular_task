@@ -26,16 +26,16 @@ export class LoginComponent {
   }
   ngOnInit() {
 
-    // reset login status
-    this.usersService.logout();
+
   }
 
   //----------------METHODS-------------------
   get f() { return this.formGroup.controls; }
 
   submitLogin() {
+
+   this.usersService.login(this.formGroup.value);
   
-    this.usersService.login(this.user);
 
   }
   createValidatorArr(cntName: string, min: number, max: number, reg: RegExp): Array<ValidatorFn> {

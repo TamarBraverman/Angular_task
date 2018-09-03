@@ -36,9 +36,7 @@ export class RegisterComponent {
   submitRegister() {
 
     this.user=JSON.parse(JSON.stringify(this.formGroup.value));
-    this.usersService.register(this.user).subscribe(res=>{alert("your details enter");
-    localStorage.setItem('currentUser', JSON.stringify(this.user));
-  }, req=>{alert("there is a mistake")});
+    this.usersService.register(this.user);
 
 
   }

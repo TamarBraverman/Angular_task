@@ -1,3 +1,18 @@
-<p>
-  cart-product works!
-</p>
+<div class="wrapper">
+  <div class="products category">
+    <ul class="">
+      <li>
+        <div class="wrapimg">
+          <img src="https://www.comparison.com.au/system/image_library/22181/Samsung_EC-ST500.jpg">
+          <div class="addPro">
+            <button (click)="remove()">remove</button>
+          </div>
+        </div>
+        <div class="titlePro">
+          <a href="javascript:;">{{products.title}}</a>
+          <p class="descTitle">Ingormations</p>
+          <p>{{products.description}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
