@@ -19,26 +19,22 @@ export class LoginComponent {
   //----------------CONSTRUCTOR------------------
   constructor(private usersService: UsersService) {
     let formGroupConfig = {
-      userName: new FormControl("Tamar", this.createValidatorArr("name", 3, 15, /^[a-zA-Z]*$/)),
-      Password: new FormControl("123456", this.createValidatorArr("password", 5, 10, /^[0-9a-zA-Z]*$/))
+      userName: new FormControl("", this.createValidatorArr("name", 3, 15, /^[a-zA-Z]*$/)),
+      Password: new FormControl("", this.createValidatorArr("password", 5, 10, /^[0-9a-zA-Z]*$/))
     };
     this.formGroup = new FormGroup(formGroupConfig);
   }
   ngOnInit() {
-
-
   }
 
   //----------------METHODS-------------------
   get f() { return this.formGroup.controls; }
 
-  submitLogin() {
-
+  submitLogin() {//cheking if the user exist
    this.usersService.login(this.formGroup.value);
-  
 
   }
-  createValidatorArr(cntName: string, min: number, max: number, reg: RegExp): Array<ValidatorFn> {
+  createValidatorArr(cntName: string, min: number, max: number, reg: RegExp): Array<ValidatorFn> {//create validation for controllers
     return [
       f => !f.value ? { "val": `${cntName} is required` } : null,
       f => f.value && f.value.length > max ? { "val": `${cntName} is max ${max} chars` } : null,

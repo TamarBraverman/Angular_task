@@ -9,13 +9,10 @@ import { Router } from '../../../../node_modules/@angular/router';
 export class ProductPreviewComponent implements OnInit {
   @Input() book:any;
     constructor(private router:Router) { 
-   
     }
-
-  ngOnInit() {
-  
+  ngOnInit() { 
   }
-  details()
+  details()//router to details
   {
     this.router.navigate(["/productDetails",this.book.volumeInfo]);
   }

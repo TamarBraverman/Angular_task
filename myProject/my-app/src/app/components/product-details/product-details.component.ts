@@ -20,16 +20,14 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.activeRoute.params.forEach(v => {
-      this.book = v;
+    this.activeRoute.params.forEach(myBook => {
+      this.book = myBook;
     });
   }
   getListCart() {
     return this.booksService.getListCart();
-
   }
-  AddToCart() {
-  
+  AddToCart() {//get all the cart of the user
     this.booksService.AddToCart(this.book);
   }
   backToProduct() {

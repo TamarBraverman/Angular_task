@@ -17,8 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import{UsersService}from'./shared/services/users.service';
 import { ProductPreviewComponent } from './components/product-preview/product-preview.component';
 import { CartProductComponent } from './components/cart-product/cart-product.component';
-import{User}from'./shared/models/user';
-import{bookStore}from'./shared/models/book-store';
+import{BooksService}from'./shared/services/books.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,8 +32,7 @@ import{bookStore}from'./shared/models/book-store';
     LoginComponent,
     RegisterComponent,
     ProductPreviewComponent,
-    CartProductComponent
-    
+    CartProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +40,7 @@ import{bookStore}from'./shared/models/book-store';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [UsersService],
+  providers: [UsersService,BooksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

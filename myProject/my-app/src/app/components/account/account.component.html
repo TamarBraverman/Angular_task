@@ -1,15 +1,14 @@
-<div id="wrapper">
-<div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div >
-                <button *ngIf="user" (click)="logout()">logout</button>
-                <a *ngIf="!user" routerLink="/account/login" >login </a>
-                <a *ngIf="!user" routerLink="/account/register" >register</a>
-           
-            </div>
-        </div>
+
+<body>
+    <div id="nav">
+        <a href="#" class="navlink" *ngIf="!user" routerLink="/account/register">
+            register
+        </a>
+        <a href="#" class="navlink" *ngIf="!user" routerLink="/account/login">
+            login
+        </a>
+
+        <button *ngIf="user" (click)="logout()">logout</button>
     </div>
-  </div>
-  <router-outlet></router-outlet>
-</div>
+</body>
+<router-outlet></router-outlet>

@@ -9,13 +9,11 @@ export class CartProductComponent implements OnInit {
   @Input() products: any;
   listProducts: any;
   constructor(private booksService:BooksService) {
-
   }
 
   ngOnInit() {
   }
   remove() {
-    this.booksService.removeFromListCart(this.products);
-
+    this.booksService.subjectBooks.next(this.products);
   }
 }

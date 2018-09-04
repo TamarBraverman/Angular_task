@@ -12,13 +12,15 @@ div{
 }
 h1{
     text-align: center;
-    color: #2900ff;
+    color: black;
     font-family: re;
     font-size: 7vh;
+    text-decoration-line: underline;
+    text-decoration-color: #de9f54;
 }
 p{
     text-align: center;
     margin-top: 4vh;
     font-size: 3vh;
-    color: blue;
+    color: black;
 }

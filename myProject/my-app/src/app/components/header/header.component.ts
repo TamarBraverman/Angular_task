@@ -12,10 +12,10 @@ export class HeaderComponent implements OnInit {
 
   constructor(private usersService:UsersService) {
     this.user = this.usersService.checkUserLogin();
-    this.usersService.subject.subscribe(
+    this.usersService.subjectUser.subscribe(
       {
-        next: (v: any) => {
-          this.user = v;
+        next: (myUser: any) => {
+          this.user = myUser;
         }
       })
   }

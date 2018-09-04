@@ -12,7 +12,7 @@ export class AccountComponent implements OnInit {
   constructor(private usersService: UsersService) {
     this.user = this.usersService.checkUserLogin();
     console.log(this.user);
-    this.usersService.subject.subscribe(
+    this.usersService.subjectUser.subscribe(//listen to subject user
       {
         next: (v: any) => {
           this.user = v;
@@ -21,7 +21,7 @@ export class AccountComponent implements OnInit {
   }
   ngOnInit() {
   }
-  logout()
+  logout()//exit from the current user
   {
     this.usersService.logout();
   }
